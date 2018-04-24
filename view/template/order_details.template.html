@@ -35,7 +35,7 @@
              <img ng-if="pCtrl.selectedCustomer.name == null || pCtrl.selectedCustomer.name == ''" src="web/img/pen-edit-disabled.svg">
                <img ng-if="pCtrl.selectedCustomer.name != null && pCtrl.selectedCustomer.name != ''" ng-click="pCtrl.openEditCustomer()" src="web/img/pen-edit.svg">
             </span>
-            <div ng-include = "'view/template/edit_customer_details_modal.template.php'"></div>
+            <div ng-include = "'view/template/edit_customer_details_modal.template.html'"></div>
          </div>
          <div class="customer-details">
 
