@@ -434,9 +434,6 @@ this.complete = function(string){
                     if((response.status)=="200"){
                         if(print){ 
                             document.addEventListener('deviceready', function () {
-                                cordova.plugins.printer.pick(function (uri) {
-                                    alert(uri ? uri : 'Canceled');
-                                });
                                 var page = document.getElementById('receipt-block');
                                 cordova.plugins.printer.print(page, 'Document.html');
 
