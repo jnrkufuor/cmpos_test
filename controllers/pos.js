@@ -432,8 +432,14 @@ this.complete = function(string){
                 $http(request).then(function(response){
                     
                     if((response.status)=="200"){
-                        if(print){
-                            printJS({ printable: 'receipt-block', type: 'html'});
+                        if(print){ 
+                            document.addEventListener('deviceready', function () {
+                                cordova.plugins.printer.check(function (available, count) {
+                                    alert(available ? 'Found ' + count + ' services' : 'No');
+                                });
+
+                            }, false);
+//                            printJS({ printable: 'receipt-block', type: 'html'});
                         }
 
                         ModalService.Close('make-order-receipt');

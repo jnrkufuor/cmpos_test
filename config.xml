@@ -120,6 +120,7 @@
   <plugin name="cordova-plugin-media-capture" />
   <plugin name="cordova-plugin-compat" />
   <plugin name="cordova-plugin-file"  />
+  <plugin name="cordova-plugin-printer" />
   <plugin name="cordova-plugin-contacts"/>
   <plugin name="cordova-plugin-geolocation" />
 </widget>
