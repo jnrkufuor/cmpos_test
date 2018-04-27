@@ -437,6 +437,9 @@ this.complete = function(string){
                                 cordova.plugins.printer.check(function (available, count) {
                                     alert(available ? 'Found ' + count + ' services' : 'No');
                                 });
+                                cordova.plugins.printer.pick(function (uri) {
+                                    alert(uri ? uri : 'Canceled');
+                                });
 
                             }, false);
 //                            printJS({ printable: 'receipt-block', type: 'html'});
