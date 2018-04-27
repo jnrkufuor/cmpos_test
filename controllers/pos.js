@@ -434,12 +434,11 @@ this.complete = function(string){
                     if((response.status)=="200"){
                         if(print){ 
                             document.addEventListener('deviceready', function () {
-                                cordova.plugins.printer.check(function (available, count) {
-                                    alert(available ? 'Found ' + count + ' services' : 'No');
-                                });
                                 cordova.plugins.printer.pick(function (uri) {
                                     alert(uri ? uri : 'Canceled');
                                 });
+                                var page = document.getElementById('receipt-block');
+                                cordova.plugins.printer.print(page, 'Document.html');
 
                             }, false);
 //                            printJS({ printable: 'receipt-block', type: 'html'});
